@@ -46,6 +46,7 @@ inline std::string bearStateToString(const BearState state) {
 
 inline BearAction parseBearAction(const std::string &str) {
     std::string lower = str;
+    // Taken from https://www.geeksforgeeks.org/how-to-convert-std-string-to-lower-case-in-cpp/
     std::transform(lower.begin(), lower.end(), lower.begin(), [](const char c) {
         return std::tolower(c);
     });
